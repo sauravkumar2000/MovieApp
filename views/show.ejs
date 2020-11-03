@@ -1,0 +1,62 @@
+<%- include('./partials/header',{search:true}) %>
+
+
+<div class="container">
+	<div class="well row">
+		<div class="col-md-4 col-sm-6">
+			<div class="thumbnail">
+				<img src="<%= data["Poster"]%>">
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6">
+			<ul class="list-group">
+				<li class="list-group-item" id="x"><strong>Title:</strong> <span><%= data["Title"]%></span></li>
+				<li class="list-group-item"><strong>Year:</strong> <span><%= data["Year"]%></span></li>
+				<li class="list-group-item"><strong>Released:</strong> <span><%= data["Released"]%></span></li>
+				<li class="list-group-item"><strong>Runtime:</strong>  <span><%= data["Runtime"]%></span></li>
+				<li class="list-group-item"><strong>Genre:</strong> <span> <%= data["Genre"]%></span></li>
+				<li class="list-group-item"><strong>Production:</strong>  <span><%= data["Production"]%></span></li>
+				<li class="list-group-item"><strong>Rating:</strong>  <span><%= data["imdbRating"]%></span></li>
+				<li class="list-group-item"><strong>Cast:</strong>  <span><%= data["Actors"]%></span></li>
+				<li class="list-group-item"><strong>Director:</strong>  <span><%= data["Director"]%></span></li>
+
+			</ul>
+			<div class="form-group">
+			      <div class="">
+			      	<a type="submit" target="_blank" class="btn btn-danger btn-small" href="http://www1.movie123.club/search/=<%=data["Title"]%>.html">Watch Now</a>
+			        <a type="submit" target="_blank" class="btn btn-warning btn-small imdb" href="https://www.imdb.com/title/<%=data["imdbID"]%>">IMDB</a>
+			        <a type="submit" target="_blank" class="btn btn-success btn-small" href="https://www.pirate-bay.net/search?q=<%=data["Title"]%>">Download</a>
+			        
+				 </div>
+			</div>
+		
+	</div>
+	<div class="row well">
+			<div class="col-md-10 col-sm-12">
+				
+					<div class="plot">
+						<h6>Plot:</h6><p><small><%=data["Plot"]%></small></p>
+					</div>
+					
+			</div>
+	</div>
+
+	<div class="well row">
+		<ul class="list-group">
+			
+				<div class="well">
+					
+					<a class="btn btn-danger btn-small pull-right" href="/result/<%=data["imdbID"]%>/comments/new">Add Review</a>
+					<h5>Reviews</h5>
+				</div>
+			<%for(var i = 0; i < comment.length; i++){%>
+
+			<li class="list-group-item"><span class="glyphicon glyphicon-user text-warning"></span> <strong class="text-warning"><%=comment[i]["author"]%>:</strong> <%=comment[i]["text"]%>
+			</li>
+			<%}%>
+		</ul>
+			
+	</div>
+	
+</div>
+

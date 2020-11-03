@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie App</title>
+	
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/3.4.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-tzza3U8XATv+JNCKjtm0Hn232CwBDxSBjYPkfcByr38iojQCN8+IvnC8OEC1r4Co" crossorigin="anonymous">
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-facetime-video logo text-danger" aria-hidden="true"></span><span class="text-danger">Movies</span></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li> -->
+      </ul>
+      <% if(search){%>
+        <form class="navbar-form navbar-right" role="search"  action="../result" method="GET">
+          <div class="form-group">
+            <input type="text" class="form-control" name="search" placeholder="Search" required>
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+      <%}%>
+
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+
+#movies .col-md-3 img{
+	height: 360px;
+	width: 100%;
+}
+
+.img-con{
+	background-image:url("https://cnet4.cbsistatic.com/img/WQCilOhv8IdRG_rZ3e8fbhIZY4o=/2019/10/10/123cb1c5-7f27-4406-8b33-ac88a5fb3b4b/free-movies.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	margin-top: 50px; 
+}
+
+
+.logo{
+	margin-right: 10px;
+	margin-top: 3px;
+}
+.more{
+	width:70%;
+	margin: 10px;
+}
+
+
+.review-div{
+	width: 40%;
+	margin: 100px auto;
+}
+
+.imdb{
+	width: 80px;
+}

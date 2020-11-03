@@ -1,0 +1,27 @@
+<%- include('./partials/header',{search:true}) %>
+
+<!-- <form action="/result" method="GET">
+	
+	    <input type="text" name="search">
+</form> -->
+
+<div class="container">
+	
+	<div id="movies" class="row">
+	 		
+		<% data["Search"].forEach((movie)=>{%>
+		<div class="col-md-3 col-sm-6">
+		  <div class="well text-center">
+			    <img src="<%=movie["Poster"]%>" class="img-responsive" alt="...">
+			      <h5 class="card-title"><%=movie["Title"]%></h5>
+			      <a href="/result/<%=movie["imdbID"]%>" class="btn btn-danger btn-xs more">More</a>
+		   </div>
+		</div>
+		<% }); %>
+	</div>
+
+	
+</div>
+
+<%- include('./partials/footer') %>
+	

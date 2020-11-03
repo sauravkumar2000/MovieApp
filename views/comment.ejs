@@ -1,0 +1,38 @@
+<%- include('./partials/header',{search:false}) %>
+
+
+<div class="container">
+
+	<ul class="breadcrumb">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="/result/<%=movID%>">Movie</a></li>
+	  <li class="active">Review</li>
+	</ul>
+
+	<div class="review-div">
+		<form action="/result/<%=movID%>/comments" method="POST">
+			<div class="form-group">
+			    <!-- <input class="form-control" type="text" name="author" placeholder="Name"> -->
+			    <!-- <input class="form-control" type="text" name="text" placeholder="Comment"> -->
+			    <label for="author" class="col-lg-2 control-label"></label>
+			      <div class="col-lg-10">
+			        <input type="text" class="form-control" id="author" placeholder="Name" name="author">
+			      </div>
+
+			    <label for="textArea" class="col-lg-2 control-label"></label>
+			      <div class="col-lg-10">
+			        <textarea class="form-control" rows="3" id="textArea" placeholder="Your review.." name="text"></textarea>
+			        <span class="help-block">Please write your review here and do not forget to mention your name.</span>
+			      </div>
+			      <div class="form-group">
+			      <div class="col-lg-10 col-lg-offset-2">
+			        <button type="reset" class="btn btn-default">Cancel</button>
+			        <button type="submit" class="btn btn-primary">Submit</button>
+			      </div>
+			    </div>
+			</div>
+		</form>
+	</div>
+</div>
+
+      

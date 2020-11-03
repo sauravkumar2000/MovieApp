@@ -1,0 +1,23 @@
+<%- include('./partials/header',{search:false}) %>
+
+<div class="container">
+<div class="jumbotron text-center">
+  <h1>Unlimitied Movies</h1>
+  <p class="lead">Online database of information related to films, television programs, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews.</p>
+</div>
+
+<form action="/result" method="GET">
+	<div class="input-group">
+	    <input class="form-control" type="text" name="search" placeholder="Search movie" required>
+	    <span class="input-group-btn">
+	    <button type="submit" class="btn btn-danger">Search</button>
+	    </span>
+	</div>
+		
+</form>
+</div>
+
+
+<div class="container">
+<div class="img-con">
+</div>
